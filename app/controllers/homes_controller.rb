@@ -1,6 +1,7 @@
 class HomesController < ApplicationController
   def index
     @home = Product.all
+    
   end
   def show
     # byebug
