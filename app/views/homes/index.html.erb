@@ -1,0 +1,21 @@
+<h1>Hello Rails</h1>
+<p>
+<ul>
+  <% @home.each do |home| %>
+    <li>
+        <a href="<%= home_path(home.id) %>">
+          <%= home.name %></a>
+       
+    </li>
+  <% end %>
+</ul>
+</p>
+
+
+
+<%= link_to "new", new_home_path %>
+
+
+
+
+
