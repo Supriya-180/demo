@@ -1,0 +1,23 @@
+<h1>Users#index</h1>
+<p>Find me in app/views/users/index.html.erb</p>
+
+
+<ul>
+  <% @user.each do |h| %>
+    <li>
+        <a href="<%= user_path(h.id) %>">
+          <%= h.login %></a>
+       
+    </li>
+  <% end %>
+</ul>
+</p>
+
+
+
+<%= link_to "new user", new_user_path %>
+
+
+
+
+

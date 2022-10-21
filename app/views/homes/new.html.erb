@@ -1,0 +1,89 @@
+<h1>new Article</h1>
+
+<%= form_with model: @product, url: "/homes", method: "post" do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+    <% @product.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+<div>
+  <%= form.label :description %><br>
+<%= form.text_area :description %><br>
+ <% @product.errors.full_messages_for(:description).each do |message| %>
+ <div><%= message %></div>
+<% end %>
+</div>
+
+<div>
+    <%= form.label :check_box %><br>
+    <%= form.check_box :check_box %><br>
+    <% @product.errors.full_messages_for(:check_box).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+</div>
+
+<div>
+    <%= form.label :email %><br>
+    <%= form.text_area :email %><br>
+    <% @product.errors.full_messages_for(:email).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+</div>
+
+<div>
+    <%= form.label :email_confirmation %><br>
+    <%= form.text_area :email_confirmation %><br>
+    <% @product.errors.full_messages_for(:email_confirmation).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+</div>
+
+<div>
+    <%= form.label :password %><br>
+    <%= form.text_area :password %><br>
+    <% @product.errors.full_messages_for(:password).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+</div>
+
+<div>
+    <%= form.label :password_confirmation %><br>
+    <%= form.text_area :password_confirmation %><br>
+    <% @product.errors.full_messages_for(:password_confirmation).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+</div>
+
+<div>
+   <%= form.radio_button :gender, "male" %>
+<%= form.label :man, "I am man" %>
+  <%= form.radio_button :gender, "female" %>
+<%= form.label :woman, "I am woman" %>
+    <% @product.errors.full_messages_for(:gender).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+</div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+
+<% if @product.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@product.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+    <ul>
+      <% @product.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+      <% end %>
+    </ul>
+  </div>
+
+
+
+<% end %>
