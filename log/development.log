@@ -24454,3 +24454,83 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 863)
 
 
+Started GET "/" for 127.0.0.1 at 2022-10-26 11:08:49 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/rails/.rvm/gems/ruby-2.7.0/gems/railties-6.1.6.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rails/.rvm/gems/ruby-2.7.0/gems/railties-6.1.6.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.6ms | Allocations: 337)
+Completed 200 OK in 14ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 2515)
+
+
+Started GET "/home/" for 127.0.0.1 at 2022-10-26 11:08:55 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+Started GET "/homes/" for 127.0.0.1 at 2022-10-26 11:09:03 +0530
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/homes/index.html.erb:4
+  Rendered homes/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 8139)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.5ms | Allocations: 14045)
+Completed 200 OK in 40ms (Views: 34.6ms | ActiveRecord: 0.7ms | Allocations: 15917)
+
+
+Started GET "/users/" for 127.0.0.1 at 2022-10-26 11:09:14 +0530
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 5298)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 8347)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 0.5ms | Allocations: 9701)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2022-10-26 11:09:17 +0530
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 47.4ms | Allocations: 2852)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 52.0ms | Allocations: 5936)
+Completed 200 OK in 54ms (Views: 52.6ms | ActiveRecord: 0.0ms | Allocations: 6475)
+
+
+Started GET "/homes/" for 127.0.0.1 at 2022-10-26 11:09:21 +0530
+Processing by HomesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/homes/index.html.erb:4
+  Rendered homes/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1946)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 5032)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.5ms | Allocations: 5420)
+
+
+Started GET "/homes/new" for 127.0.0.1 at 2022-10-26 11:09:25 +0530
+Processing by HomesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/new.html.erb within layouts/application
+  Rendered homes/new.html.erb within layouts/application (Duration: 16.2ms | Allocations: 3797)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 6882)
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.0ms | Allocations: 7411)
+
+
+Started POST "/homes" for 127.0.0.1 at 2022-10-26 11:09:26 +0530
+Processing by HomesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"", "description"=>"", "check_box"=>"0", "email"=>"", "email_confirmation"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Product"}
+  Rendering layout layouts/application.html.erb
+  Rendering homes/new.html.erb within layouts/application
+  Rendered homes/new.html.erb within layouts/application (Duration: 13.1ms | Allocations: 5463)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 8488)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 9699)
+
+
